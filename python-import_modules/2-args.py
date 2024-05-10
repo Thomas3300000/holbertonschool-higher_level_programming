@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-    
+
     cpt = len(sys.argv) - 1
-    
+
     if cpt == 0:
         print("{} arguments.".format(cpt))
     elif cpt == 1:
