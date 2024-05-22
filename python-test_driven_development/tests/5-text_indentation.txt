@@ -1,0 +1,34 @@
+# 5-text_indentation.py
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+This module print a square ``text_indentation(text)``.
+
+================
+Test for success
+================
+
+>>> text_indentation("hello")
+hello
+
+>>> text_indentation("hello:you")
+hello:
+<BLANKLINE>
+you
+
+>>> text_indentation("hello.you")
+hello.
+<BLANKLINE>
+you
+
+>>> text_indentation("hello?you")
+hello?
+<BLANKLINE>
+you
+
+=============
+Test for fail
+=============
+
+>>> text_indentation(102)
+Traceback (most recent call last):
+TypeError: text must be a string
