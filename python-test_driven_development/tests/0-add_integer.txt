@@ -1,0 +1,61 @@
+# 0-add_integer.py
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+This module defines an integer addition function ``add_integer(a, b=98)``.
+
+================
+Test for success
+================
+
+>>> add_integer(3, 5)
+8
+
+>>> add_integer(20, -5)
+15
+
+>>> add_integer(2, -4)
+-2
+
+>>> add_integer(1.5, 3.6)
+4
+
+>>> add_integer(3.0, 5.0)
+8
+
+>>> add_integer(10, 10)
+20
+
+>>> add_integer(-10, 5)
+-5
+
+>>> add_integer(2)
+100
+
+=============
+Test for fail
+=============
+
+>>> add_integer("hello", 10)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(15, "Last")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(none)
+Traceback (most recent call last):
+NameError: name 'none' is not defined
+
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+>>> add_integer(3, float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(3, float('nan'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
