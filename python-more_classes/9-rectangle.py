@@ -60,8 +60,8 @@ class Rectangle:
         """Print the rectangle with the # character"""
         if self.__width == 0 or self.__height == 0:
             return ("")
-        return ("\n".join([str(self.print_symbol) * self.__width
-                           for i in range(self.__height)]))
+        return ("\n".join([str(self.print_symbol) * self.__width 
+                            for i in range(self.__height)]))
 
     def __repr__(self):
         """Return the string representation"""
@@ -86,4 +86,4 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """Return a new Rectangle instance with width == height == size"""
-        return (cls(size, size))
+        return cls(size, size)
