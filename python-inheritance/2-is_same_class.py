@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Create a function that returns True if the object is an instance 
+"""Create a function that returns True if the object is an instance
 otherwise False."""
 
 
