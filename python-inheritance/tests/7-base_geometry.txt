@@ -13,6 +13,7 @@ Test for success
 
 >>> bg.integer_validator("test", 3)
 >>> bg.integer_validator("test", 1)
+>>> bg.integer_validator("test", 1000000000)
 
 =============
 Test for fail
@@ -37,3 +38,17 @@ ValueError: test must be greater than 0
 >>> bg.integer_validator()
 Traceback (most recent call last):
 TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+
+>>> bg.integer_validator("test", 1.0)
+Traceback (most recent call last):
+TypeError: test must be an integer
+
+>>> bg.integer_validator("test", -1.5)
+Traceback (most recent call last):
+TypeError: test must be an integer
+
+
+>>> bg.integer_validator("test", none)
+Traceback (most recent call last):
+NameError: name 'none' is not defined
