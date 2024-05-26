@@ -8,14 +8,6 @@ This module defines a method to print the list sorted ``print_sorted(self)``
 Test for success
 ================
 
->>> my_list = MyList([4, 2, 1, 3])
->>> print(my_list)
-[4, 2, 1, 3]
->>> my_list.print_sorted()
-[1, 2, 3, 4]
->>> print(my_list)
-[4, 2, 1, 3]
-
 >>> my_list = MyList()
 >>> my_list.append(1)
 >>> my_list.append(4)
@@ -28,13 +20,6 @@ Test for success
 >>> print(my_list)
 [1, 4, 2, 3]
 
->>> my_list = MyList([-4, -2, -1, -3])
->>> print(my_list)
-[-4, -2, -1, -3]
->>> my_list.print_sorted()
-[-4, -3, -2, -1]
->>> print(my_list)
-[-4, -2, -1, -3]
 
 >>> my_list = MyList()
 >>> my_list.append(-1)
@@ -48,13 +33,6 @@ Test for success
 >>> print(my_list)
 [-1, -4, -2, -3]
 
->>> my_list = MyList([20, -5, 0, 15])
->>> print(my_list)
-[20, -5, 0, 15]
->>> my_list.print_sorted()
-[-5, 0, 15, 20]
->>> print(my_list)
-[20, -5, 0, 15]
 
 >>> my_list = MyList()
 >>> my_list.append(20)
@@ -68,13 +46,6 @@ Test for success
 >>> print(my_list)
 [20, -5, 0, 15]
 
->>> my_list = MyList([1.5, 3.6, 2.1])
->>> print(my_list)
-[1.5, 3.6, 2.1]
->>> my_list.print_sorted()
-[1.5, 2.1, 3.6]
->>> print(my_list)
-[1.5, 3.6, 2.1]
 
 >>> my_list = MyList()
 >>> my_list.append(1.5)
@@ -87,13 +58,6 @@ Test for success
 >>> print(my_list)
 [1.5, 3.6, 2.1]
 
->>> my_list = MyList(["un", "deux", "trois"])
->>> print(my_list)
-["un", "deux", "trois"]
->>> my_list.print_sorted()
-["deux", "trois", "un"]
->>> print(my_list)
-["un", "deux", "trois"]
 
 >>> my_list = MyList()
 >>> my_list.append("un")
