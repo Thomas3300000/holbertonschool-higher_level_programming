@@ -38,11 +38,11 @@ class Circle (Shape):
 
     def area(self):
         """Return area of circle"""
-        return (math.pi * (self.radius * self.radius))
+        return abs(math.pi * (self.radius * self.radius))
 
     def perimeter(self):
         """Return perimeter of circle"""
-        return (math.pi * (self.radius * 2))
+        return abs(math.pi * (self.radius * 2))
 
 
 def shape_info(shape):
