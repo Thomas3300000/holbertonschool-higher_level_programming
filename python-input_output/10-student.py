@@ -20,7 +20,7 @@ class Student:
 
         Args:
             attrs (list): List of attributes
-        
+
         Returns:
             dict: Dictionary representation of a Student
         """
@@ -29,7 +29,7 @@ class Student:
         else:
             new_dict = {}
             dictionary = self.__dict__
-            
+
             for cpt in attrs:
                 if cpt in dictionary:
                     new_dict[cpt] = dictionary[cpt]
