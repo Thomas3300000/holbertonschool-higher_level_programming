@@ -18,7 +18,7 @@ class CustomObject:
         self.is_student = is_student
 
     def display(self):
-        """Define mthode to print object's attributes"""
+        """Define methode to print object's attributes"""
         print("Name: {}".format(self.name))
         print("Age: {}".format(self.age))
         print("Is student: {}".format(self.is_student))
@@ -28,7 +28,7 @@ class CustomObject:
         try:
             with open(filename, 'wb') as f:
                 pickle.dump(self, f)
-        except (FileNotFoundError, pickle.PicklingError):
+        except (FileNotFoundError, Exception):
             return None
 
     @classmethod
@@ -37,5 +37,5 @@ class CustomObject:
         try:
             with open(filename, 'rb') as f:
                 return pickle.load(f)
-        except (FileNotFoundError, pickle.UnpicklingError):
+        except (FileNotFoundError, Exception):
             return None
