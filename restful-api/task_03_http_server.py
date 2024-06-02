@@ -3,7 +3,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 import json
 
 
-class classhttp(BaseHTTPRequestHandler):
+class subclasshttp(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/":
             self.send_response(200)
@@ -34,5 +34,5 @@ class classhttp(BaseHTTPRequestHandler):
             self.wfile.write(b"404 Not Found")
 
 
-httpd = HTTPServer(('', 8000), classhttp)
+httpd = HTTPServer(('', 8000), subclasshttp)
 httpd.serve_forever()
