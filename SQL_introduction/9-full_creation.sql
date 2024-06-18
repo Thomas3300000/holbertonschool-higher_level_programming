@@ -1,4 +1,4 @@
--- Script create a a table in a database
+-- Script create a table in a database
 -- 9-full_creation.sql
 CREATE TABLE IF NOT EXISTS second_table (
     id INT, 
