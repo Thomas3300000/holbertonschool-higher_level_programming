@@ -3,11 +3,10 @@
 Lists all records from the database hbtn_0e_0_usa
 name matching the argument
 
-4 arguments:
+arguments:
 - username of the MySQL user
 - password of the MySQL user
 - database name of the MySQL server
-- state name searched: arguments to match
 """
 if __name__ == "__main__":
     import MySQLdb
