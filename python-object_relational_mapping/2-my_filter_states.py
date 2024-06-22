@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-Write a script that takes in an argument and displays all values 
-in the states table of hbtn_0e_0_usa where name matches the argument.
+Lists all records from the database hbtn_0e_0_usa
+name matching the argument
+
 Arguments:
 - username of the MySQL user
 - password of the MySQL user
