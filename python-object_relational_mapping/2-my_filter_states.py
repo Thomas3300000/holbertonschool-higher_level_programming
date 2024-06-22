@@ -7,9 +7,7 @@ arguments:
 - username of the MySQL user
 - password of the MySQL user
 - database name of the MySQL server
-
-The script that takes in an argument and displays
-all values in the states table of hbtn_0e_0_usa where name matches the argument.
+- state name searched: arguments to match
 """
 if __name__ == "__main__":
     import MySQLdb
