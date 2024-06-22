@@ -7,6 +7,9 @@ arguments:
 - username of the MySQL user
 - password of the MySQL user
 - database name of the MySQL server
+
+The script that takes in an argument and displays
+all values in the states table of hbtn_0e_0_usa where name matches the argument.
 """
 if __name__ == "__main__":
     import MySQLdb
@@ -26,7 +29,7 @@ if __name__ == "__main__":
     )
 
     cur = db.cursor()
-    arg = "SELECT * FROM states \
+    arg = "SELECT * FROM states\
         WHERE name = '{}' ORDER BY id ASC".format(state_name)
     cur.execute(arg)
     states = cur.fetchall()
