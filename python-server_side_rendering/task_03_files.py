@@ -20,8 +20,8 @@ def contact():
 def items():
     with open ('items.json') as file:
         data = json.load(file)
-        list = data.get('items', [])
-        return render_template('items.html', items=list)
+        items_list = data.get('items', [])
+        return render_template('items.html', items=items_list)
     
 def read_json():
     with open ('products.json') as f:
@@ -31,8 +31,8 @@ def read_json():
 def read_csv():
     products = []
     with open ('products.csv', newline='') as f:
-        list = csv.DictReader(f)
-        for row in list:
+        reader = csv.DictReader(f)
+        for row in reader:
             products.append({
                 "id": int(row['id']),
                 "name": row['name'],
@@ -44,22 +44,21 @@ def read_csv():
 @app.route('/products')
 def products_display():
     source = request.args.get('source')
-    products_id = request.args.get('id', type=int)
-    products = []
+    product_id = request.args.get('id', type=int)
     
     if source == 'json':
         products = read_json()
     elif source == 'csv':
         products = read_csv()
     else:
-        return render_template('products_display.html', error='Wrong source')
+        return render_template('product_display.html', error='Wrong source')
         
-    if products_id:
-        products = [product for product in products if product['id'] == products_id]
+    if product_id:
+        products = [product for product in products if product['id'] == product_id]
         if not products:
-            return render_template('products_display.html', error='Product not found')
+            return render_template('product_display.html', error='Product not found')
 
-    return render_template('products_display.html', products=products)
+    return render_template('product_display.html', products=products)
         
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
